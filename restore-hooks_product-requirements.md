@@ -372,3 +372,5 @@ The following requirements are out of scope for the Velero Restore Hooks MVP:
  
 
 For questions, please contact michaelmi@vmware.com,  [bstephanie@vmware.com](mailto:bstephanie@vmware.com) 
+
+Signed-off-by: Stephanie Bauman bstephanie@vmware.com
