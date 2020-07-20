@@ -56,6 +56,7 @@ Goals for this feature include:
 *   Provide observability/status of restore commands run in restored pods
 *   Extend restore logs to include status, error codes and necessary metadata for restore commands run during restore operations for enhanced troubleshooting capabilities 
 *   Provide post-restore hooks for customizing end of restore operations
+*   Include pre-populated data that has been serialized by a Velero backup hook into a container or external service prior to allowing a restore to be marked as completed. 
 
 Non-goals
 
@@ -145,19 +146,6 @@ The following use cases must be included as part of the Velero restore hooks MVP
 **<span style="text-decoration:underline;">USE CASE 7</span>**
 
 
-    **Title: **Include or exclude namespaces from restore
-
-
-    **Description: **As a user, I would like to include all resources in namespaces contained in a backup  by default in my restore spec. 
-
-
-    If velero is asked to restore something that already exists in a pod, the restore will not return a success but will still work - Ashish needs to verify.
-
-**<span style="text-decoration:underline;">______________________________________________________________</span>**
-
-**<span style="text-decoration:underline;">USE CASE 8</span>**
-
-
     **Title: **Restore of a stateful application (Unquiescing data from a quiesced backup)
 
 
@@ -171,7 +159,7 @@ The following use cases must be included as part of the Velero restore hooks MVP
 
 **<span style="text-decoration:underline;">______________________________________________________________</span>**
 
-**<span style="text-decoration:underline;">USE CASE 9</span>**
+**<span style="text-decoration:underline;">USE CASE 8</span>**
 
 
     **Title: **Display/surface restore status 
@@ -181,7 +169,7 @@ The following use cases must be included as part of the Velero restore hooks MVP
 
 **<span style="text-decoration:underline;">______________________________________________________________</span>**
 
-**<span style="text-decoration:underline;">USE CASE 10</span>**
+**<span style="text-decoration:underline;">USE CASE 9</span>**
 
 
     **Title: **Restore metadata
@@ -194,31 +182,7 @@ The following use cases must be included as part of the Velero restore hooks MVP
 
 **<span style="text-decoration:underline;">______________________________________________________________</span>**
 
-**<span style="text-decoration:underline;">USE CASE 11</span>**
-
-
-    **Title: **Retry restore upon restore failure/error/timeout
-
-
-    **Description: **As a user, if I see that a restore has failed, I would like for Velero to retry the restore operations using the restore specification. 
-
-
-    Retry should happen to support the following failure/error scenarios for a restore:
-
-
-
-*   Restore timeout (set max timeout on retry restore operation, set max number of retry attempts)
-    *   Retry specified restore operations after timeout of 30 minutes (default)
-    *   Retry specified restore operations after 3 retry attempts
-*   Restore error - could not access specified backup
-    *   Display backup access or backup error log 
-    *   Allow users to say ‘yes’ to allowing Velero to pick up the next most recent backup
-    *   Allow user to select backup (if specific backup was previously specified)
-
-**<span style="text-decoration:underline;">______________________________________________________________</span>**
-
-**<span style="text-decoration:underline;">USE CASE 12</span>**
-
+**<span style="text-decoration:underline;">USE CASE 10</span>*
 
     **Title: **Increase default restore and retry limits. 
 
@@ -354,7 +318,6 @@ P2.
 The following requirements are out of scope for the Velero Restore Hooks MVP:
 
 
-
 1. Verifying the integrity of a backup, resource, or other artifact will not be included in the scope of this effort. 
 2. Verifying the integrity of a snapshot using kubernetes hash checks.
 3. Running concurrent restore operations (for the MVP) a secondary epic will be opened to align better with the concurrent workload operations currently set on the Velero roadmap for Q4 timeframe. 
@@ -372,5 +335,3 @@ The following requirements are out of scope for the Velero Restore Hooks MVP:
  
 
 For questions, please contact michaelmi@vmware.com,  [bstephanie@vmware.com](mailto:bstephanie@vmware.com) 
-
-Signed-off-by: Stephanie Bauman bstephanie@vmware.com
