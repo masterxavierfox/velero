@@ -136,10 +136,10 @@ The following use cases must be included as part of the Velero restore hooks MVP
 **<span style="text-decoration:underline;">USE CASE 6</span>**
 
 
-    **Title: **Display/surface restore status 
+    **Title: **Display/surface output from restore hooks/restore status 
 
 
-    **Description:** As a user, I would like to see the status of my restore status surfaced from the pod volume restore status. Including statuses:  Pending, Running/In Progress, Succeeded, Failed, Unknown.
+    **Description:** As a user, I would like to see the output of the restore hooks/status of my restore surfaced from the pod volume restore status. Including statuses:  Pending, Running/In Progress, Succeeded, Failed, Unknown.
 
 **<span style="text-decoration:underline;">______________________________________________________________</span>**
 
