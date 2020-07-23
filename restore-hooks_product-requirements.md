@@ -136,32 +136,6 @@ The following use cases must be included as part of the Velero restore hooks MVP
 **<span style="text-decoration:underline;">USE CASE 6</span>**
 
 
-    **Title: **Specify backup snapshot to use for restore
-
-
-    **Description: **As a user, I would like the option to specify a specific backup snapshot for use by Velero during restore create. I would like to do this instead of using the default most recent backup restore snapshot.
-
-**<span style="text-decoration:underline;">______________________________________________________________</span>**
-
-**<span style="text-decoration:underline;">USE CASE 7</span>**
-
-
-    **Title: **Restore of a stateful application (Unquiescing data from a quiesced backup)
-
-
-    **Description: **As a user, I would like to prepare a backup to be restored without having to freeze an in-use volume/volume that an application is using.
-
-
-    As a user, I would like to unquiesce data during a restore to prevent the need to shut down the database and disrupt the application end user experience. 
-
-
-    _Note: Some dbs have built in way to back up _
-
-**<span style="text-decoration:underline;">______________________________________________________________</span>**
-
-**<span style="text-decoration:underline;">USE CASE 8</span>**
-
-
     **Title: **Display/surface restore status 
 
 
@@ -169,7 +143,7 @@ The following use cases must be included as part of the Velero restore hooks MVP
 
 **<span style="text-decoration:underline;">______________________________________________________________</span>**
 
-**<span style="text-decoration:underline;">USE CASE 9</span>**
+**<span style="text-decoration:underline;">USE CASE 7</span>**
 
 
     **Title: **Restore metadata
@@ -182,7 +156,7 @@ The following use cases must be included as part of the Velero restore hooks MVP
 
 **<span style="text-decoration:underline;">______________________________________________________________</span>**
 
-**<span style="text-decoration:underline;">USE CASE 10</span>*
+**<span style="text-decoration:underline;">USE CASE 8</span>*
 
     **Title: **Increase default restore and retry limits. 
 
@@ -290,8 +264,6 @@ P0. Use Case 1 - Run restore hook before pod restart.
 P0.  Use Case 3- Run restore at pod level.
 
 P0. Use Case 5 - Check for latest snapshot
-
-P0. Use Case 8 - Restore of a stateful application (Unquiescing data from a quiesced backup)
 
 P0. Use Case 9 - ** **Display/surface restore status 
 
