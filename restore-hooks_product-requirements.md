@@ -71,7 +71,7 @@ Assumptions
 
 
 *   Restore operations will be run at the pod level instead of at the volume level. Some databases require the pod to be running and in some cases a user cannot manipulate a volume without the pod running. We need to support more than one type of database for this feature and so we need to ensure that this works broadly as opposed to providing support only for specific dbs. 
-*   The author of the restore hook will be responsible for invoking the restore hook. 
+*   Velero will be responsible for invoking the restore hook. 
 
  
 
