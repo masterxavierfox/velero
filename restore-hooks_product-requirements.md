@@ -109,7 +109,7 @@ The following use cases must be included as part of the Velero restore hooks MVP
     **Title: **Run restore at pod level.
 
 
-    **Description: **As a user, I would like to make sure that I can run the restore hook at the pod level. And, I would like the option to run this with an annotation flag in line or using an init container.**<span style="text-decoration:underline;"> </span>**The restore pre-hook should allow the user to run the command on the container where the pre-hook should be executed. Similar to the backup hooks, this hook should run to default to fun on the first container in the pod. 
+    **Description: **As a user, I would like to make sure that I can run the restore hook at the pod level. And, I would like the option to run this with an annotation flag in line or using an init container.**<span style="text-decoration:underline;"> </span>**The restore pre-hook should allow the user to run the command on the container where the pre-hook should be executed. Similar to the backup hooks, this hook should run to default to run on the first container in the pod. 
 
 **<span style="text-decoration:underline;">______________________________________________________________</span>**
 
@@ -172,7 +172,7 @@ User Experience
 
 The following is representative of what the user experience could look like for Velero restore pre-hooks and post-hooks. 
 
-**_Note: These examples are representative and are not to be considered for us in pre- and post- restore hook operations until the technical design is complete._**
+**_Note: These examples are representative and are not to be considered for use in pre- and post- restore hook operations until the technical design is complete._**
 
 **Restore Pre-Hooks**
 
